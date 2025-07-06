@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>CPSC Check 报告导出</title>
+    <title>Magaya PGA PDF to Excel </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- 引入 Bootstrap 5 -->
@@ -27,30 +27,28 @@
         <div class="col-md-8 col-lg-6">
             <div class="card shadow">
                 <div class="card-header bg-primary text-white text-center">
-                    <h4 class="mb-0">CPSC Check 报告导出</h4>
+                    <h4 class="mb-0">Magaya PGA PDF to Excel</h4>
                 </div>
                 <div class="card-body">
                     <form method="POST" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <label for="pdfs" class="form-label">上传 ABI Status PDF 文件</label>
+                            <label for="pdfs" class="form-label">Upload All PGA ABI Status Pdf.</label>
                             <input class="form-control" type="file" id="pdfs" name="pdfs" multiple required>
                         </div>
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">生成 Excel 报告</button>
+                            <button type="submit" class="btn btn-primary">Generate Excel</button>
                         </div>
                     </form>
                 </div>
             </div>
 
-            <div class="text-center mt-4 text-muted">
-                <small>支持多个 PDF 文件上传</small>
-            </div>
+            <div class="watermark">AGS JFK 西哥</div>
         </div>
     </div>
 </div>
 
 <!-- 水印 -->
-<div class="watermark">AGS JFK 西哥吧</div>
+<div class="watermark">AGS JFK 西哥</div>
 
 <!-- Bootstrap JS（可选） -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
