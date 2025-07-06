@@ -102,6 +102,13 @@ def index():
                 filepath = os.path.join(UPLOAD_FOLDER, file.filename)
                 file.save(filepath)
                 all_records += extract_cpsc_lines(filepath)
+        # ✅ 自动删除 uploads 下所有文件
+        for file in os.listdir(UPLOAD_FOLDER):
+            file_path = os.path.join(UPLOAD_FOLDER, file)
+            try:
+                os.remove(file_path)
+            except Exception as e:
+                print(f"Failed to delete {file_path}: {e}")
         if all_records:
             return generate_excel(all_records)
     return render_template("index.html")
